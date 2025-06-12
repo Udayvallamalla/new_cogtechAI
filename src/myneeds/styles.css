@@ -1,0 +1,150 @@
+.my-needs-container {
+  padding: 40px;
+  background-color: #f0f2f5;
+  min-height: calc(100vh - 80px); /* Adjust based on header/footer if any */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.my-needs-header {
+  width: 100%;
+  max-width: 700px;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.my-needs-header h2 {
+  font-size: 2.2rem;
+  color: #333;
+  font-weight: 600;
+}
+
+.post-need-section {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 700px;
+  margin-bottom: 40px;
+}
+
+.post-need-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.need-input,
+.need-textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.need-textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.need-input:focus,
+.need-textarea:focus {
+  outline: none;
+  border-color: #1890ff;
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+}
+
+.post-need-button {
+  background-color: #1890ff;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: background-color 0.2s, box-shadow 0.2s;
+  align-self: flex-end; /* Align button to the right */
+}
+
+.post-need-button:hover {
+  background-color: #40a9ff;
+  box-shadow: 0 4px 8px rgba(24, 144, 255, 0.3);
+}
+
+.open-needs-section {
+  width: 100%;
+  max-width: 700px;
+}
+
+.open-needs-section h3 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.open-need-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  margin-bottom: 15px;
+}
+
+.open-need-card h4 {
+  font-size: 1.2rem;
+  color: #1a237e;
+  margin-bottom: 8px;
+}
+
+.open-need-card p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.view-quotes-link {
+  color: #1890ff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.view-quotes-link:hover {
+  color: #40a9ff;
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .my-needs-container {
+    padding: 20px;
+  }
+
+  .my-needs-header h2 {
+    font-size: 1.8rem;
+  }
+
+  .post-need-section,
+  .open-needs-section {
+    padding: 20px;
+  }
+
+  .post-need-button {
+    width: 100%;
+    align-self: stretch;
+  }
+
+  .open-needs-section h3 {
+    font-size: 1.5rem;
+  }
+
+  .open-need-card {
+    padding: 15px;
+  }
+}

@@ -1,0 +1,564 @@
+.home-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 0 0 40px 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cogtech-logo-container {
+  background-color: #fff;
+  border-radius: 25px;
+  padding: 10px 25px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 30px;
+  margin-bottom: 0px;
+}
+
+.cogtech-icon {
+  width: 20px;
+  height: 20px;
+  background-color: #3498db; /* Example color, match exact if known */
+  border-radius: 50%; /* For a circular icon, adjust if it's different */
+  /* You might replace this with an actual SVG or image icon */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* For the small dots */
+}
+
+.cogtech-icon::before,
+.cogtech-icon::after {
+  content: '';
+  position: absolute;
+  background-color: #fff;
+  border-radius: 50%;
+  width: 4px;
+  height: 4px;
+}
+
+.cogtech-icon::before {
+  top: 6px;
+  left: 6px;
+}
+
+.cogtech-icon::after {
+  bottom: 6px;
+  right: 6px;
+}
+
+.cogtech-logo-container span:last-child {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 40px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.home-logo {
+  width: 80px;
+}
+
+.nav-links {
+  position: relative;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background-color: #00b86b;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #009e5b;
+}
+
+.arrow-down {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid white;
+  margin-left: 10px;
+}
+
+.dropdown-content {
+  display: block;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 220px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  right: 0;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.home-header {
+  text-align: center;
+  padding: 0px 16px 24px 0px;
+  margin-top: 0;
+}
+
+.home-header h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #1a237e;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.home-header h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #00b86b;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.home-subtext {
+  color: #3a3a3a;
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto 10px auto;
+}
+
+.home-actions {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 0px;
+}
+
+.home-btn {
+  padding: 12px 28px;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  text-decoration: none;
+  display: inline-block;
+}
+.home-btn.primary {
+  background: #1a237e;
+  color: #fff;
+}
+.home-btn.primary:hover {
+  background: #3949ab;
+}
+.home-btn.secondary {
+  background: #fff;
+  color: #1a237e;
+  border: 2px solid #1a237e;
+}
+.home-btn.secondary:hover {
+  background: #e3e6f3;
+}
+
+.home-stats {
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+  margin: 0px 0 24px 0;
+  font-size: 1.1rem;
+}
+.home-stats div {
+  text-align: center;
+}
+.home-stats strong {
+  display: block;
+  font-size: 1.5rem;
+  color: #1a237e;
+  font-weight: 700;
+}
+.home-stats span {
+  color: #3a3a3a;
+}
+
+.home-features {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin: 0 auto;
+  max-width: 1100px;
+  /* flex-wrap: wrap; */
+}
+.feature-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(30, 60, 90, 0.08);
+  padding: 28px 24px;
+  width: 200px;
+  text-align: center;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.feature-card:hover {
+  box-shadow: 0 6px 24px rgba(30, 60, 90, 0.16);
+  transform: translateY(-4px) scale(1.03);
+}
+.feature-card span {
+  font-size: 2.2rem;
+  display: block;
+  margin-bottom: 10px;
+}
+.feature-card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1a237e;
+  margin-bottom: 6px;
+}
+.feature-card p {
+  color: #3a3a3a;
+  font-size: 0.98rem;
+}
+
+@media (max-width: 900px) {
+  .home-features {
+    gap: 16px;
+  }
+  .feature-card {
+    width: 160px;
+    padding: 20px 10px;
+  }
+}
+@media (max-width: 600px) {
+  .home-header h1 {
+    font-size: 1.5rem;
+  }
+  .home-header h2 {
+    font-size: 1.1rem;
+  }
+  .home-stats {
+    gap: 16px;
+    font-size: 0.95rem;
+  }
+  .home-features {
+    flex-direction: column;
+    align-items: center;
+  }
+  .feature-card {
+    width: 90vw;
+    max-width: 320px;
+  }
+}
+
+.why-cogtech-ai {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #f0f4f8; /* Light blue background */
+  width: 100%;
+}
+
+.why-cogtech-ai h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #1a237e;
+  margin-bottom: 30px;
+}
+
+.why-features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 900px;
+  margin: 0 auto;
+  justify-items: center;
+}
+
+.why-features .feature-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  padding: 28px 24px;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+  width: 100%; /* Ensure cards take full width in their grid column */
+  max-width: 240px; /* Limit max width for larger screens */
+}
+
+.why-features .feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.why-features .feature-card span {
+  font-size: 2.8rem; /* Larger icon size */
+  display: block;
+  margin-bottom: 15px;
+}
+
+.why-features .feature-card h3 {
+  font-size: 1.4rem; /* Larger heading */
+  font-weight: 700;
+  color: #1a237e;
+  margin-bottom: 10px;
+}
+
+.why-features .feature-card p {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.environmental-stats {
+  display: flex;
+  justify-content: center;
+  gap: 48px; /* Adjust as needed for spacing */
+  margin: 24px auto;
+  font-size: 1.1rem;
+}
+
+.environmental-stats div {
+  text-align: center;
+}
+
+.environmental-stats strong {
+  display: block;
+  font-size: 2.5rem; /* Larger font size for numbers */
+  color: #00b86b; /* Green color for numbers */
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.environmental-stats span {
+  color: #3a3a3a; /* Grey color for descriptions */
+  font-size: 0.9rem; /* Smaller font size for descriptions */
+}
+
+.featured-companies-section {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #e6f0f8; /* Light blue background for this section */
+  width: 100%;
+}
+
+.featured-companies-section h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #1a237e;
+  margin-bottom: 30px;
+}
+
+.company-cards-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-items: center;
+}
+
+.company-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  padding: 24px;
+  width: 180px;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+  position: relative;
+}
+
+.company-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.trusted-tag {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background-color: #00b86b; /* Default green */
+  color: white;
+  padding: 4px 10px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.trusted-tag.green {
+  background-color: #28a745;
+}
+
+.trusted-tag.orange {
+  background-color: #fd7e14;
+}
+
+.trusted-tag.blue {
+  background-color: #007bff;
+}
+
+.trusted-tag.yellow {
+  background-color: #ffc107;
+}
+
+.company-card h3 {
+  font-size: 1.5rem;
+  color: #1a237e;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+.esg-score-label {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.esg-score {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 5px;
+  font-size: 1.2rem;
+  color: #00b86b;
+  font-weight: 600;
+}
+
+.score-value {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-right: 2px;
+  color: #00b86b;
+}
+
+.score-slash {
+  font-size: 1.2rem;
+  vertical-align: super; /* Position above baseline */
+  margin-right: 0px;
+  color: #00b86b;
+}
+
+.score-max {
+  font-size: 1.2rem;
+  vertical-align: sub; /* Position below baseline */
+  color: #00b86b;
+}
+
+.score-bar-bg {
+  flex-grow: 1;
+  height: 8px;
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+  margin-left: 10px;
+}
+
+.score-bar-fill {
+  height: 100%;
+  background-color: #00b86b;
+  border-radius: 4px;
+}
+
+.esg-innovators-section {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #f0f4f8;
+  width: 100%;
+}
+
+.esg-innovators-section h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #1a237e;
+  margin-bottom: 30px;
+}
+
+.innovator-cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  max-width: 1000px;
+  margin: 0 auto;
+  justify-items: center;
+}
+
+.innovator-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  padding: 15px;
+  width: 200px;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.innovator-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.innovator-initials {
+  width: 70px;
+  height: 70px;
+  background-color: #00b86b;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.innovator-card h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #1a237e;
+  margin-bottom: 5px;
+}
+
+.innovator-role {
+  font-size: 0.85rem;
+  color: #00b86b;
+  margin-bottom: 10px;
+}
+
+.innovator-quote {
+  font-style: italic;
+  color: #555;
+  font-size: 0.85rem;
+  line-height: 1.4;
+} 
