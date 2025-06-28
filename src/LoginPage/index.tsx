@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -24,7 +23,15 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen gradient-bg flex items-center justify-center px-6">
+    <div className="min-h-screen gradient-bg flex items-center justify-center px-6" style={{ position: 'relative' }}>
+      {/* Back Button */}
+      <button
+        onClick={() => navigate("/")}
+        style={{ position: 'absolute', top: 24, left: 24, background: 'none', border: 'none', color: '#1a237e', fontWeight: 600, fontSize: '1rem', display: 'flex', alignItems: 'center', cursor: 'pointer' }}
+        aria-label="Go back"
+      >
+        <span style={{ fontSize: '1.5rem', marginRight: 6 }}>&larr;</span> Back
+      </button>
       <div className="w-full max-w-md">
         {/* Logo */}
         <div className="flex items-center justify-center space-x-3 mb-8">

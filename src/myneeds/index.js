@@ -38,6 +38,8 @@ const MyNeeds = () => {
 
   return (
     <div className="my-needs-container">
+      <button className='back-button' onClick={() => window.history.back()}>
+        <span role="img" aria-label="back">⬅️</span> Back </button>
       <div className="my-needs-header">
         <h2>Marketplace: Sourcing Needs</h2>
       </div>

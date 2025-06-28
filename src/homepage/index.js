@@ -212,6 +212,51 @@ const Home = () => {
           ))}
         </div>
       </div>
+      {/* Meet the Team Section */}
+      <div className="team-section">
+        <h2>Meet the Team</h2>
+        <div className="team-cards-container">
+          <div className="team-card">
+            <img src="https://media.licdn.com/dms/image/C4D03AQF1QwKkQwKkQw/profile-displayphoto-shrink_200_200/0/1516881234567?e=1718236800&v=beta&t=example1" alt="Abraham Bollarapu" />
+            <div className="team-name">Abraham Bollarapu</div>
+            <div className="team-role">Founder & CEO</div>
+            <div className="team-desc">Visionary, strategist, and technology leader.</div>
+          </div>
+          <div className="team-card">
+            <img src="https://media.licdn.com/dms/image/C4E03AQF2QwKkQwKkQw/profile-displayphoto-shrink_200_200/0/1516881234567?e=1718236800&v=beta&t=example2" alt="Evžen Thöndel" />
+            <div className="team-name">Evžen Thöndel</div>
+            <div className="team-role">Co-Founder & CTO</div>
+            <div className="team-desc">Visionary, strategist, and technology leader.</div>
+          </div>
+          <div className="team-card">
+            <img src="https://media.licdn.com/dms/image/C4F03AQF3QwKkQwKkQw/profile-displayphoto-shrink_200_200/0/1516881234567?e=1718236800&v=beta&t=example3" alt="Naren K" />
+            <div className="team-name">Naren K</div>
+            <div className="team-role">Co-Founder & COO</div>
+            <div className="team-desc">Visionary, strategist, and technology leader.</div>
+          </div>
+          <div className="team-card">
+            <img src="https://media.licdn.com/dms/image/C4G03AQF4QwKkQwKkQw/profile-displayphoto-shrink_200_200/0/1516881234567?e=1718236800&v=beta&t=example4" alt="Madhusudhana Rao Rachaputi" />
+            <div className="team-name">Madhusudhana Rao Rachaputi</div>
+            <div className="team-role">Co-Founder & CMO</div>
+            <div className="team-desc">Visionary, strategist, and technology leader.</div>
+          </div>
+        </div>
+      </div>
+      {/* Email Subscribe Section */}
+      <div className="subscribe-section">
+        <h3>Get ESG insights & platform updates</h3>
+        <form className="subscribe-form" onSubmit={e => { e.preventDefault(); alert('Thank you for subscribing!'); }}>
+          <input
+            type="email"
+            className="subscribe-input"
+            placeholder="Enter your email"
+            required
+          />
+          <button type="submit" className="subscribe-btn">
+            Subscribe
+          </button>
+        </form>
+      </div>
     </div>
   );
 };

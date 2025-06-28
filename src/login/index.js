@@ -47,8 +47,17 @@ const Login = () => {
     }
   };
 
+
   return (
     <div className="login-container">
+      {/* Back Button */}
+      <button
+        onClick={() => navigate('/')}
+        className="back-button"
+        aria-label="Go back"
+      >
+        <span style={{ fontSize: '1.5rem', marginRight: 6 }}>&larr;</span> Back
+      </button>
       <div className="login-box">
         <h2>Welcome Back</h2>
         <form onSubmit={handleSubmit}>

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './styles.css';
+import { useNavigate } from 'react-router-dom';
 
 const Profile = () => {
   const [profileInfo, setProfileInfo] = useState({
@@ -7,6 +8,7 @@ const Profile = () => {
     email: 'keith10@test.com',
     company: 'Green Manufacturing Co.'
   });
+  const navigate = useNavigate();
 
   const handleProfileChange = (e) => {
     const { name, value } = e.target;
@@ -39,6 +41,14 @@ const Profile = () => {
 
   return (
     <div className="profile-container">
+      {/* Back Button */}
+      <button
+        onClick={() => navigate('/')}
+        className="back-button"
+        aria-label="Go back"
+      >
+        <span style={{ fontSize: '1.5rem', marginRight: 6 }}>&larr;</span> Back
+      </button>
       <div className="profile-header">
         <h1>Profile Settings</h1>
         <p>Manage your account settings and ESG verification status.</p>

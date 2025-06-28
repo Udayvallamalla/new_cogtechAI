@@ -12,7 +12,7 @@ import Profile from './profile';
 
 function App() {
   const location = useLocation();
-  const noHeaderFooterPaths = ['/dashboard', '/my-needs', '/profile']; // Paths where header/footer should not display
+  const noHeaderFooterPaths = ['/dashboard', '/my-needs', '/profile', '/login', '/signup']; // Paths where header/footer should not display
   const shouldDisplayHeaderFooter = !noHeaderFooterPaths.includes(location.pathname);
 
   return (

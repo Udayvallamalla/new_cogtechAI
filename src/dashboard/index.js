@@ -16,7 +16,7 @@ const Dashboard = () => {
       <aside className="sidebar">
         <div className="sidebar-header">
           <h2>CogTechAI</h2>
-        </div>
+        
         <nav className="sidebar-nav">
           <ul>
             <li>
@@ -36,6 +36,7 @@ const Dashboard = () => {
             </li>
           </ul>
         </nav>
+      </div>
         <div className="sidebar-footer">
           <button className="logout-button" onClick={handleLogout}>
             <span role="img" aria-label="logout">➡️</span> Log Out

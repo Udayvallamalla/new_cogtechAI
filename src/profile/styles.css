@@ -3,6 +3,7 @@
   background-color: #f0f2f5;
   min-height: calc(100vh - 80px); /* Adjust based on header/footer if any */
   font-family: 'Segoe UI', Arial, sans-serif;
+  position: relative;
 }
 
 .profile-header {
@@ -184,6 +185,27 @@
 .stat-box span {
   font-size: 0.9rem;
   color: #555;
+}
+
+.back-button {
+  position: absolute;
+  top: 32px;
+  left: 32px;
+  background: none;
+  border: none;
+  color: #3498db;
+  font-weight: 600;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: color 0.2s;
+}
+
+.back-button:hover {
+  color: #217dbb;
+  text-decoration: underline;
 }
 
 @media (max-width: 768px) {

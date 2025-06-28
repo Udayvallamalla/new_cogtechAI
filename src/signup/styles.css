@@ -1,10 +1,33 @@
 .signup-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-  padding: 20px;
+  padding: 60px 20px 20px 20px;
+  position: relative;
+}
+
+.back-button {
+  position: absolute;
+  top: 32px;
+  left: 32px;
+  background: none;
+  border: none;
+  color: #3498db;
+  font-weight: 600;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: color 0.2s;
+}
+
+.back-button:hover {
+  color: #217dbb;
+  text-decoration: underline;
 }
 
 .signup-box {
