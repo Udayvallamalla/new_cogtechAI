@@ -1,11 +1,15 @@
-FROM python:3.10-slim
+# Step 1: Build the React app
+FROM node:18-alpine AS build
 
 WORKDIR /app
+COPY . .
+RUN npm install
+RUN npm run build
 
-COPY . /app
+# Step 2: Serve the build using Nginx
+FROM nginx:alpine
 
-RUN pip install --no-cache-dir -r requirements.txt
+COPY --from=build /app/build /usr/share/nginx/html
 
-EXPOSE 5000
-
-CMD ["python", "app.py"]
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
